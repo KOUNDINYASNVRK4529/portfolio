@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanka N V Rama Krishna Koundinya | Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #0f0f0f;
+      --accent-color: #00adb5;
+      --text-color: #eeeeee;
+      --card-bg: #1f1f1f;
+      --hover-bg: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--card-bg);
+      padding: 40px 20px;
+      transition: background-color 0.5s ease;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 10px;
+      border: 4px solid var(--accent-color);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+
+    .bio {
+      max-width: 600px;
+      margin: 10px 20px;
+      font-size: 1.25rem;
+    }
+
+    .nav-container {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .nav-container.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: var(--card-bg);
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: var(--text-color);
+      padding: 15px 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s, color 0.3s, transform 0.3s;
+    }
+
+    nav button:hover {
+      background-color: var(--hover-bg);
+      transform: scale(1.05);
+    }
+
+    .section {
+      display: none;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .section.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--card-bg);
+      color: #aaa;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="profile.jpg" alt="Sanka Koundinya" class="profile-pic" />
+    <div class="bio">
+      <h1>Sanka N V Rama Krishna Koundinya</h1>
+      <p><strong>AI & Data Science Enthusiast</strong><br>B.Tech CSE (AI & DS), 2025</p>
+      <p>Place: Guntur, Andhra Pradesh<br>
+         Contact: +91 9182646113<br>
+         Email: <a href="mailto:snvrkkoundinya@gmail.com" style="color: var(--accent-color);">snvrkkoundinya@gmail.com</a><br>
+         <a href="https://www.linkedin.com/in/koundinyasnvrk" target="_blank" style="color: var(--accent-color);">LinkedIn</a></p>
+    </div>
+  </header>
+
+  <div class="nav-container" id="nav-container">
+    <nav>
+      <button onclick="showSection('about')">Summary</button>
+      <button onclick="showSection('education')">Education</button>
+      <button onclick="showSection('internships')">Internships</button>
+      <button onclick="showSection('projects')">Project</button>
+      <button onclick="showSection('skills')">Additional Info</button>
+    </nav>
+  </div>
+
+  <section id="about" class="section">
+    <h2>Summary</h2>
+    <p>I’m a recent Computer Science graduate who enjoys building things through code and solving real problems with technology. During college, I got the chance to work on hands-on projects that really helped me understand how to apply what I was learning. I’ve built a basic foundation in Java and Python, and I’m excited to start my career in a role where I can keep learning, take on new challenges, and contribute to meaningful work as part of a supportive team.</p>
+  </section>
+
+  <section id="education" class="section">
+    <h2>Education</h2>
+    <p><strong>B.Tech in Computer Science Engineering (Specialized in AI & DS)</strong><br />
+    Kallam Haranadhareddy Institute of Technology, 2025<br />
+    CGPA: 8.6*/10, till 4-1.</p>
+  </section>
+
+  <section id="internships" class="section">
+    <h2>Internships</h2>
+    <ul>
+      <li><strong>Salesforce Developer Virtual Internship</strong> | Salesforce (Aug - Oct 2023)<br />
+        Practical experience with Apex, Lightning Web Components, and Process Automation. <br>Super Badges: Apex Specialist, Process Automation Specialist, Developer Super Set</li>
+      <li><strong>Virtual Internship Program in Networking</strong> | Cisco (May - July 2024)<br>
+        Focused on networking fundamentals, network configuration, security protocols, and troubleshooting.</li>
+      <li><strong>Machine Learning Internship (240 Hours)</strong> | Smart Bridge Educational Services (Jul - Nov 2024)<br>
+        Hands-on with supervised/unsupervised learning, data preprocessing, and model evaluation.</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Project</h2>
+    <p><strong>Rainfall Prediction Using Machine Learning</strong><br />
+    • Built a machine learning-based rainfall prediction system using EDA, feature engineering, Gradient Boosting, Random Forest, and Decision Trees.<br />
+    • Developed a Flask-based web interface for real-time user interaction.<br />
+    • Improved weather forecasting, disaster preparedness, and system efficiency.</p>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Additional Information</h2>
+    <p><strong>Programming Languages:</strong> C, JAVA, Python, SQL, JavaScript, HTML, CSS<br />
+    <strong>Languages:</strong> Telugu, English, Hindi<br />
+    <strong>Extracurricular Activity:</strong> Community Service Project | Water Facilities in Slum Areas<br />
+    Led a team to assess the drinking water systems in underserved areas. Interacted with locals, identified water access issues, and proposed sustainable solutions.<br />
+    <strong>Interest:</strong> Strong interest in Artificial Intelligence, especially in Deep Learning and Large Language Models.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sanka N V Rama Krishna Koundinya. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach((sec) => {
+        if (sec.id === id) {
+          sec.style.display = 'block';
+          setTimeout(() => {
+            sec.classList.add('active');
+          }, 10);
+        } else {
+          sec.classList.remove('active');
+          setTimeout(() => {
+            sec.style.display = 'none';
+          }, 500);
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      showSection('about');
+
+      const navContainer = document.getElementById('nav-container');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navContainer.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.5 });
+
+      observer.observe(document.querySelector('header'));
+    });
+  </script>
+</body>
+</html>
